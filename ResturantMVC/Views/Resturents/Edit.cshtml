@@ -1,0 +1,47 @@
+﻿
+@model ResturantMVC.ViewModel.ResturentViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Create</h1>
+
+<h4>Resturent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                    <label asp-for="Resturent.Id" class="control-label"></label>
+                    <input asp-for="Resturent.Id" class="form-control" />
+
+                </div>*@
+            <div class="form-group">
+                <label asp-for="Resturent.Name" class="control-label"></label>
+                <input asp-for="Resturent.Name" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Resturent.Location" class="control-label"></label>
+                <input asp-for="Resturent.Location" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Resturent.Cusine" class="control-label"></label>
+                <select class="form-control" asp-for="Resturent.Cusine"
+                        asp-items="@Model.Cusines"></select>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>>
+

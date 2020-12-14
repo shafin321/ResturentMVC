@@ -1,0 +1,56 @@
+﻿@model  IEnumerable<ResturantMVC.Models.Resturent>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<a asp-controller="Resturents" asp-action="Create"  class="btn btn-primary">Create</a>
+
+<p>
+    Title: <input type="text" />
+    <input type="submit" value="Filter" />
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Location
+        </th>
+        <th>
+            Cusine Type
+        </th>
+    </tr>
+
+
+    @foreach(var item in Model)
+    {
+<tr>
+    <td>
+        @item.Name
+    </td>
+    <td>
+        @item.Location
+    </td>
+
+    <td>
+        @item.Cusine
+    </td>
+
+    <td>
+        <a asp-controller="Resturents" asp-action="Detail" asp-route-id="@item.Id" class="btn btn-primary">Detail</a>
+    <td>
+        <a asp-controller="Resturents" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+    </td>
+    </td>
+</tr>
+
+
+    }
+
+
+</table>
