@@ -12,6 +12,7 @@ namespace ResturantMVC.Interface
         Resturent GetById(int id);
         void Create(Resturent resturent);
         void Update(Resturent resturent);
+        Resturent Delete(int id);
         void Commit();
     }
 }

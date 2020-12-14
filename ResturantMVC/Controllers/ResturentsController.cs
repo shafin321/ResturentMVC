@@ -109,5 +109,35 @@ namespace ResturantMVC.Controllers
 
         }
 
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var delete = _resturent.GetById(id);
+            if (delete == null)
+            {
+                return NotFound();
+            }
+
+            return View(delete);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public IActionResult ConfirmDelete(int id)
+        {
+            var ItemToDelete = _resturent.GetById(id);
+            if(ItemToDelete == null)
+            {
+                return NotFound();
+            }
+
+            else
+            {
+                _resturent.Delete(id);
+                _resturent.Commit();
+
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

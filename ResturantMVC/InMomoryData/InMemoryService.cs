@@ -58,5 +58,10 @@ namespace ResturantMVC.InMomoryData
         {
             throw new NotImplementedException();
         }
+
+        public Resturent Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -162,3 +162,4 @@ C:\Users\Shujaul\source\repos\EcommerceProject\ResturantMVC\ResturantMVC\obj\Deb
 C:\Users\Shujaul\source\repos\EcommerceProject\ResturantMVC\ResturantMVC\obj\Debug\netcoreapp3.1\Razor\Views\Resturents\Detail.cshtml.g.cs
 C:\Users\Shujaul\source\repos\EcommerceProject\ResturantMVC\ResturantMVC\obj\Debug\netcoreapp3.1\Razor\Views\Resturents\Create.cshtml.g.cs
 C:\Users\Shujaul\source\repos\EcommerceProject\ResturantMVC\ResturantMVC\obj\Debug\netcoreapp3.1\Razor\Views\Resturents\Edit.cshtml.g.cs
+C:\Users\Shujaul\source\repos\EcommerceProject\ResturantMVC\ResturantMVC\obj\Debug\netcoreapp3.1\Razor\Views\Resturents\Delete.cshtml.g.cs

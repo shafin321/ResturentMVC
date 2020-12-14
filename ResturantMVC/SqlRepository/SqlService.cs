@@ -55,6 +55,15 @@ namespace ResturantMVC.SqlRepository
             }
         }
 
-        
+        public Resturent Delete(int id)
+        {
+            var deleteItem = _context.Resturents.FirstOrDefault(r => r.Id == id);
+            if(deleteItem != null)
+            {
+                _context.Remove(deleteItem);
+            }
+
+            return deleteItem;
+        }
     }
 }
