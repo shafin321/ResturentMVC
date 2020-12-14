@@ -30,7 +30,7 @@ namespace ResturantMVC.InMomoryData
             resturents.Add(resturent);
         }
 
-        public IEnumerable<Resturent> GetByName()
+        public IEnumerable<Resturent> GetByName(string name)
         {
             return resturents;
         }

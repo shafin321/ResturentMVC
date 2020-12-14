@@ -8,7 +8,7 @@ namespace ResturantMVC.Interface
 {
     public interface IResturentService
     {
-        IEnumerable<Resturent> GetByName();
+        IEnumerable<Resturent> GetByName(string name);
         Resturent GetById(int id);
         void Create(Resturent resturent);
         void Update(Resturent resturent);

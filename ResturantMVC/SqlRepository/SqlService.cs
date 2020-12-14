@@ -27,9 +27,10 @@ namespace ResturantMVC.SqlRepository
             _context.Add(resturent);
         }
 
-        public IEnumerable<Resturent> GetByName()
+        public IEnumerable<Resturent> GetByName(string name)
         {
             return from r in _context.Resturents
+                   where string.IsNullOrEmpty(name) || r.Name.Contains(name) //r.Name.StartsWith(name) // r.Name ==name
                    orderby r.Name
                    select r;
         }

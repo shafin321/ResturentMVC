@@ -20,10 +20,17 @@ namespace ResturantMVC.Controllers
             _resturent = resturent;
             _htmlHelper = htmlHelper;
         }
-        public IActionResult Index()
+        public IActionResult Index(string SearchTearm)
         {
-            var model = _resturent.GetByName();
-            return View(model);
+            var model = _resturent.GetByName(SearchTearm);
+            var viewmodel = new ListSearchViewModel
+            {
+                Resturents = model,
+                SearchTearm = SearchTearm
+
+            };
+            
+            return View(viewmodel);
         }
 
         public IActionResult Detail(int id)
